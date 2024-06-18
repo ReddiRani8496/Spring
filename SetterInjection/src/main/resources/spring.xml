@@ -1,0 +1,21 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="lap1" class="com.xable.Laptop">
+
+    </bean>
+    <bean id="emp" class="com.xable.Employee" scope="singleton">
+        <!--it is calling the setter method inside employee class -->
+
+    </bean>
+    <bean id="employee" class="com.xable.Employee" scope="prototype">
+        <property name="salary" value="5000"/>
+        <property  name="lap" ref="lap1"/>
+    </bean>
+</beans>
+
