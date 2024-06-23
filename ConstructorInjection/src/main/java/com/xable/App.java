@@ -20,11 +20,11 @@ public class App
 //        Desktop desktop = appContext.getBean("desktop",Desktop.class);
 
         // in annotation specifying the bean name
-        Desktop desktop = appContext.getBean("desk",Desktop.class);
+        Desktop desktop = appContext.getBean(Desktop.class);
         desktop.compile();
 
         // because in annotations we specified scope as prototype two objs created
-        Desktop desktop1 = appContext.getBean("desk",Desktop.class);
+        Desktop desktop1 = appContext.getBean(Desktop.class);
         desktop1.compile();
 
 
@@ -32,16 +32,15 @@ public class App
         // Employee obj using annotations
         Employee emp = appContext.getBean(Employee.class);
         emp.code();
+       // emp.compile();
+        System.out.println(emp.getSalary());
 
 
 
 
 
 
-
-
-
-
+        
 
 //        ApplicationContext ctx =new ClassPathXmlApplicationContext("spring.xml");
 

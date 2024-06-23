@@ -1,5 +1,10 @@
 package com.xable;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Employee {
 
 
@@ -12,11 +17,12 @@ public class Employee {
         this.lap = lap;
     }
 
-
+    @Value("2000")
     private int salary;
-
+    @Autowired
     Laptop lap;
 
+    @Autowired
     Desktop desktop;
 
     public Desktop getDesktop() {

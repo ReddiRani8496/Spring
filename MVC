@@ -1,0 +1,13 @@
+Layers in Spring:
+
+User Interface -->  Controller, Service, Repository --> Database
+
+-> User makes a request
+
+-> Controller takes the request
+
+-> Services is the place where your business logic is written. Controller based on the request delegates to particular service class.
+
+-> Repository is nothing but DAO(Data Access Object) where the data base operations are written.
+
+-> Based on the method it will make data base request
